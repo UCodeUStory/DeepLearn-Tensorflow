@@ -77,12 +77,13 @@
             sess = tf.Session()
             sess.run(...)
             sess.close()
-<<<<<<< HEAD
 
            ** 上面如果在执行过程中发现了异常，就会到时sess.close()不会被执行,所以python中可以用with语句来管理,这样也就不需要手动调用close，python会自动调用
 
-           with tf.Session() as sess:
-               sess.run(...)
+           
+            with tf.Session() as sess:
+                  sess.run(...)
+
    - 6. TensorFlow实现神经网络
            提取特征向量
            卡迪尔坐标系
@@ -92,14 +93,7 @@
            - - 4.全连接神经网络前向传播算法：相邻两层之间任意两个节点都有链接
            - - 5.除了输入层之外的节点都代表了一个神经元的结构，一个神经元也叫一个节点，每一个节点的取值都是输入层取值的加权和(X1*W1+X2*W2..)
            - - 6.前向传播算法可以理解为向量的乘法
+           
         ![image](https://github.com/UCodeUStory/DeepLearn-Tensorflow/blob/master/vector.png)
         
          [矩阵和方程转换详解](http://www.ruanyifeng.com/blog/2015/09/matrix-multiplication.html)
-=======
-         ** 上面如果在执行过程中发现了异常，就会到时sess.close()不会被执行,所以python中可以用with语句来管理,这样也就不需要手动调用close，python会自动调用
-
-           with tf.Session() as sess:
-               sess.run(...)
-
-       
->>>>>>> d4773b4edce8a991e56613822b2259909224a0ae
