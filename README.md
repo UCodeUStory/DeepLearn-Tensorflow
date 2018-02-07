@@ -94,6 +94,6 @@
            - - 5.除了输入层之外的节点都代表了一个神经元的结构，一个神经元也叫一个节点，每一个节点的取值都是输入层取值的加权和(X1*W1+X2*W2..)
            - - 6.前向传播算法可以理解为向量的乘法
            
-        ![image](https://github.com/UCodeUStory/DeepLearn-Tensorflow/blob/master/vector.png)
+        ![image](https://github.com/UCodeUStory/DeepLearn-Tensorflow/blob/master/vector.jpeg)
         
          [矩阵和方程转换详解](http://www.ruanyifeng.com/blog/2015/09/matrix-multiplication.html)
