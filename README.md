@@ -93,13 +93,11 @@
            - - 4.全连接神经网络前向传播算法：相邻两层之间任意两个节点都有链接
            - - 5.除了输入层之外的节点都代表了一个神经元的结构，一个神经元也叫一个节点，每一个节点的取值都是输入层取值的加权和(X1*W1+X2*W2..)
            - - 6.前向传播算法可以理解为向量的乘法
-           
-        ![image](https://github.com/UCodeUStory/DeepLearn-Tensorflow/blob/master/vector.jpeg)
-        
-         [矩阵和方程转换详解](http://www.ruanyifeng.com/blog/2015/09/matrix-multiplication.html)
+           - - [前向传播算法计算图解](https://github.com/UCodeUStory/DeepLearn-Tensorflow/blob/master/vector.jpeg)
+           - - [矩阵和方程转换详解](http://www.ruanyifeng.com/blog/2015/09/matrix-multiplication.html)
 
          变量的声明：tf.Variable(tf.random_normal([2,3],stddev=2))//生成变量，必须初始值
-         初始值得方法有很多，这里使用随机数生成函数，产生一个2x3矩阵，均值为0（mean可以指定均值，默认0），标准差2
+         初始值得方法有很多，这里使用随机数生成函数，产生一个2x3矩阵，均值为0（mean可以指定均值，默认0），标准差2
 
    - 7. 通过TensorFlow训练神经网络模型
 
