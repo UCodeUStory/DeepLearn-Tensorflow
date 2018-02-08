@@ -71,8 +71,8 @@ with tf.Session() as sess:
     print (sess.run(w1))
     print (sess.run(w2))
 
-    #设定训练的轮数
-    STEPS = 8000
+    #设定训练的轮数 ,9000次就能够确定参数 
+    STEPS = 20000
     for i in range(STEPS):
         #每次选取batch_size个样本进行训练，这里一轮8个
         start = (i * batch_size) % dataset_size
