@@ -96,16 +96,16 @@
            
         ![image](https://github.com/UCodeUStory/DeepLearn-Tensorflow/blob/master/vector.jpeg)
         
-         [矩阵方程转换详解](http://www.ruanyifeng.com/blog/2015/09/matrix-multiplication.html)
+         [矩阵和方程转换详解](http://www.ruanyifeng.com/blog/2015/09/matrix-multiplication.html)
 
          变量的声明：tf.Variable(tf.random_normal([2,3],stddev=2))//生成变量，必须初始值
          初始值得方法有很多，这里使用随机数生成函数，产生一个2x3矩阵，均值为0（mean可以指定均值，默认0），标准差2
 
    - 7. 通过TensorFlow训练神经网络模型
 
-        1.监督式学习：监督式学习的重要思想就是，在已知答案的标注数据集上，模型给出的数据结果要尽量接近真实答案.通过调整神经网络中的参数对训练数据的拟合,可以使得模型对未知数据样本达到预测能力
+        1.监督式学习：监督式学习的重要思想就是，在已知答案的标注数据集上，模型给出的数据结果要尽量接近真实答案.通过调整神经网络中的参数对训练数据的拟合,可以使得模型对未知数据样本达到预测能力
 
         2.神经网络优化算法中，反向传播算法是最常用的方式
 
-  [Day01参数变量的使用](https://github.com/UCodeUStory/DeepLearn-Tensorflow/blob/master/python/Day01_Variable.py)
-  [Day02完整的神经网络训练](https://github.com/UCodeUStory/DeepLearn-Tensorflow/blob/master/python/Day02_SimpleTrain.py)
+ - [Day01参数变量的使用](https://github.com/UCodeUStory/DeepLearn-Tensorflow/blob/master/python/Day01_Variable.py)
+ - [Day02完整的神经网络训练](https://github.com/UCodeUStory/DeepLearn-Tensorflow/blob/master/python/Day02_SimpleTrain.py)
