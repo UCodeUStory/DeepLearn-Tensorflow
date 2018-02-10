@@ -8,7 +8,7 @@ print sess.run(hello)
 # 计算 10 + 32 并输出
 a = tf.constant(10)
 b = tf.constant(32)
-print sess.run(a+b)
+print (sess.run(a+b))
 
 # 把一个1*2的矩阵和一个2*1的矩阵相乘并输出
 matrix1 = tf.constant([[3., 3.]])
