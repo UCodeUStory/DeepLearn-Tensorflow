@@ -121,11 +121,45 @@
       前面神经元的输出都是所有输入的加权和，导致整个神经网络是个线性模型，如果每隔神经元的输出通过一个非线性函数，name整个神经网络的模型也就不再是线性的了，这个非线性的函数就是激活函数。
        - 偏置项：
       偏置项是神经网络中非常常用的一种结构。偏执项可以表达为输入项永远为1的节点
+       - Tensorflow 中提供7种激活函数：常用的分别是tf.nn.relu tf.sigmoid tf.tanh,也支持使用自定义激活函数
+
+                  a = tf.nn.relu(tf.matmul(x,w1) + b1)
+                  y = tf.nn.relu(tf.matmul(a,w2) + b2)
+
     - [常用激活函数](https://github.com/UCodeUStory/DeepLearn-Tensorflow/blob/master/source/active_function.png)
     - [加上激活函数和偏置项的算法公式](https://github.com/UCodeUStory/DeepLearn-Tensorflow/blob/master/source/new_qianzhichuanbo.png)
     - [输出层计算公式图解](https://github.com/UCodeUStory/DeepLearn-Tensorflow/blob/master/source/out.png)
+    - 多层网络可以解决异或问题
    2. 合理设定神经网络优化目标（也就是定损函数）、常用定损函数
+    - 分类问题和回归问题是监督学习的两大种类
+    - 分类问题一般有多个结果，回归问题一般就一个结果
+    - 分类问题最长用的损失函数交叉熵计算
+    - 回归问题最长用的损失函数均方差
+    - 交叉熵：计算概率分布的距离
+    - 有一个三分类问题：某样例正确答案是（1，0，0），预测答案是（0.5，0.4,0.1）
+    [交叉熵的计算](https://github.com/UCodeUStory/DeepLearn-Tensorflow/blob/master/source/jiaochashang.png)
+    - Tensorflow交叉熵的计算
 
+            cross_entropy = -tf.reduce_mean(y_ * tf.log(tf.clip_by_value(y,1e-10,1.0)))
+            其中这里包含四个不同的Tensorflow运算，
+            第一步：
+            tf.clip_by_value可以将一个张量的数值限制一个范围，也就是矩阵中的数值做限制，避免出现log0这种问题
+            例如v = tf.constant([[ 1.0,2.0,3.0],[4.0,5.0,6.0]])
+            print (tf.clip_by_value(v,2.5,4.5).eval())
+            #输出 [[2.5,2.5.3.0],[4.0,4.5,4.5]]
+            第二步：计算tf.log
+            第三步：
+            两个矩阵通过“*”不是矩阵的乘法，而是矩阵元素之间相乘
+            v1 = tf.constant([[1.0,2.0],[3.0,4.0]])
+            v2 = tf.constant([[5.0,6.0],[7.0,8.0]])
+            print(v1*b2).eval()
+            # 输出[[5.0,12.0][21.0,32.0]]
+            前三步结果：nxm的二维矩阵，其中n为一个batch中的样例数量，m为分类的类别数量
+            第四步：求取nxm的每一行交叉熵，然后对n行取平局值
+            print (tf.reduce_mean(v).eval())
+     
+     - 自定义损失函数
+         自定义损失函数使得神经网络结果更趋向与真实值
 
  ## 代码
  - [Day01参数变量的使用](https://github.com/UCodeUStory/DeepLearn-Tensorflow/blob/master/python/Day01_Variable.py)
