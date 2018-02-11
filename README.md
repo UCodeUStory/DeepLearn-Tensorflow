@@ -121,7 +121,7 @@
       前面神经元的输出都是所有输入的加权和，导致整个神经网络是个线性模型，如果每隔神经元的输出通过一个非线性函数，name整个神经网络的模型也就不再是线性的了，这个非线性的函数就是激活函数。
        - 偏置项：
       偏置项是神经网络中非常常用的一种结构。偏执项可以表达为输入项永远为1的节点
-       - Tensorflow 中提供7种激活函数：常用的分别是tf.nn.relu tf.sigmoid tf.tanh,也支持使用自定义激活函数
+       - Tensorflow 中提供7种激活函数：常用的分别是tf.nn.relu tf.sigmoid tf.tanh,也支持使用自定义激活函数
 
                   a = tf.nn.relu(tf.matmul(x,w1) + b1)
                   y = tf.nn.relu(tf.matmul(a,w2) + b2)
@@ -134,7 +134,7 @@
     - 分类问题和回归问题是监督学习的两大种类
     - 分类问题一般有多个结果，回归问题一般就一个结果
     - 分类问题最长用的损失函数交叉熵计算
-    - 回归问题最长用的损失函数均方差
+    - 回归问题最长用的损失函数均方差
     - 交叉熵：计算概率分布的距离
     - 有一个三分类问题：某样例正确答案是（1，0，0），预测答案是（0.5，0.4,0.1）
     [交叉熵的计算](https://github.com/UCodeUStory/DeepLearn-Tensorflow/blob/master/source/jiaochashang.png)
@@ -159,7 +159,7 @@
             print (tf.reduce_mean(v).eval())
      
      - 自定义损失函数
-         自定义损失函数使得神经网络结果更趋向与真实值
+         自定义损失函数使得神经网络结果更趋向与真实值
 
  ## 代码
  - [Day01参数变量的使用](https://github.com/UCodeUStory/DeepLearn-Tensorflow/blob/master/python/Day01_Variable.py)
