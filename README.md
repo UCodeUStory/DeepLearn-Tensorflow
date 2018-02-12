@@ -159,7 +159,7 @@
             print (tf.reduce_mean(v).eval())
      
      - 自定义损失函数
-         自定义损失函数使得神经网络结果更趋向与真实值
+         - 自定义损失函数使得神经网络结果更趋向与真实值
 
  ## 代码
  - [Day01参数变量的使用](https://github.com/UCodeUStory/DeepLearn-Tensorflow/blob/master/python/Day01_Variable.py)
