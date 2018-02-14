@@ -139,6 +139,7 @@
     - 有一个三分类问题：某样例正确答案是（1，0，0），预测答案是（0.5，0.4,0.1）
     
     [交叉熵的计算](https://github.com/UCodeUStory/DeepLearn-Tensorflow/blob/master/source/jiaochashang.png)
+    
     - Tensorflow交叉熵的计算
 
             cross_entropy = -tf.reduce_mean(y_ * tf.log(tf.clip_by_value(y,1e-10,1.0)))
