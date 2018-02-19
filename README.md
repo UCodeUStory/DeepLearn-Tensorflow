@@ -143,7 +143,7 @@
     - Tensorflow交叉熵的计算
 
             cross_entropy = -tf.reduce_mean(y_ * tf.log(tf.clip_by_value(y,1e-10,1.0)))
-            其中这里包含四个不同的Tensorflow运算，
+            其中这里包含四个不同的Tensorflow运算
             第一步：
             tf.clip_by_value可以将一个张量的数值限制一个范围，也就是矩阵中的数值做限制，避免出现log0这种问题
             例如v = tf.constant([[ 1.0,2.0,3.0],[4.0,5.0,6.0]])
